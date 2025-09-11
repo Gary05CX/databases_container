@@ -10,7 +10,7 @@ This project sets up a local environment for testing and demo purposes using Doc
 ### MongoDB
 - **Localhost Port**: 27170
 # Usage
-1. Ensure you have Docker and Docker Compose installed.
+1. Ensure you have Docker Engine and Docker Desktop installed.
 2. Open a terminal in this directory.
 3. Run `docker compose up`.
 4. Use `CTRL+C` or `control + C` to stop the container when you are finished using it.
@@ -26,7 +26,7 @@ This project sets up a local environment for testing and demo purposes using Doc
 2. Go to the container tap.
 3. Open the images of this container by clicking the ">" button.
 4. Click MongoDB_Server. 
-5. Click `Exce`tap and run your MongoDB command by starting with `mongosh`. 
+5. Click `Exce`tap and run your MongoDB command. 
 #### Connect by local terminal
 1. Ensure you have MongoDB installed.
 2. Open your terminal.
@@ -60,3 +60,10 @@ psql -h localhost -d postgres -U postgres
 3. Run `psql -h localhost -p 6543 -d postgres -U postgres` and start using.
 # Database log storage
 After you run this container, a `.database` directory should be created under this project directory. This folder contains the data files and log files of both 2 databases.
+# Download links
+- [Docker Engine (CLI, server version)](https://docs.docker.com/engine/install/)
+- [Docker Desktop (GUI for Windows, Mac, some Linux)](https://www.docker.com/products/docker-desktop/)
+- [MongoDB Server](https://www.mongodb.com/try/download/community)
+- [MongoDB Compass (GUI for MongoDB)](https://www.mongodb.com/try/download/compass)
+- [PostgreSQL](https://www.postgresql.org/download/)
+- [pgAdmin 4 (GUI for PostgreSQL)](https://www.pgadmin.org/download/)
