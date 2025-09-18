@@ -1,7 +1,7 @@
 services:
   mongodb:
     build: 
-      context: .
+      context: ./databases/mongodb/
       dockerfile: dockerfile-mongodb
     container_name: MongoDB_Server
     ports:
@@ -11,7 +11,7 @@ services:
       - ./.database/mongodb/log:/var/mongo/log
   postgresql:
     build:
-      context: .
+      context: ./databases/postgresql/
       dockerfile: dockerfile-postgresql
     container_name: PostgreSQL_Server
     ports:

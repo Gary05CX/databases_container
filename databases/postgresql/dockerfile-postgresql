@@ -1,5 +1,6 @@
 FROM postgres:latest
 
+
 # Set time zone to Hong Kong and locale to en_US.UTF-8
 RUN apt-get update && apt-get install -y locales tzdata && \
     ln -fs /usr/share/zoneinfo/Asia/Hong_Kong /etc/localtime && \
@@ -17,6 +18,9 @@ ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=postgres
 ENV POSTGRES_DB=postgres
 ENV PGDATA=/var/lib/postgresql/data
+
+# Copy the initialization script to the PostgreSQL init directory
+COPY init.sql /docker-entrypoint-initdb.d/
 
 # Create log directory with correct permissions
 RUN mkdir -p /var/log/postgresql && \
